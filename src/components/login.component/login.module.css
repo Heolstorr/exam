@@ -1,0 +1,194 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 15px;
+    color: #464646;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+    transition: background-color 0.2s;
+}
+
+.closeBtn:hover {
+    background-color: #dbdbdb;
+}
+
+
+.formSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    position: relative;
+}
+
+.formWrapper {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 50px; 
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 0px;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #575757;
+    margin-bottom: 30px;
+}
+
+.inputGroup {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input::placeholder{
+    color: #adadad;
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input:hover {
+    border-color: #8f8f8f;
+}
+
+.input:focus {
+    border-color: #0066ff;
+}
+
+.eyeIcon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.eyeIcon:hover {
+    opacity: 1;
+}
+
+.eyeIcon:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+    background-color: #0052cc;
+}
+
+
+.forgotPassword {
+    margin-top: 35px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resetLink {
+    color: #0066ff;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.resetLink:hover {
+    text-decoration: underline;
+}
+
+
+.footerLink {
+    font-size: 14px;
+    color: #333;
+}
+
+.footerLink a {
+    color: #0066ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footerLegal {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 11px;
+    color: #888;
+    text-align: left;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+.legalLink {
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.legalLink:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.imageSection {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .imageSection { display: none; }
+}

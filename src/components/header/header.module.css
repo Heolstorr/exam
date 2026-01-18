@@ -1,0 +1,124 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style:normal;
+}
+
+.logoLink {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0066ff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.logoSection {
+    height: 100%;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logoImage {
+    height: 20px;
+    width: 100%;
+}
+
+.menuSection {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menuLinkT {
+    height: 40px;
+    width: 80px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+.menuLinkT:hover {
+    background-color: #F0F0F0;
+
+}
+
+
+.menuLinkG {
+    height: 40px;
+    width: 80px;
+    text-decoration: none;
+    color: #e43a87;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+.menuLinkG:hover {
+    background-color: #FCE7F3;
+}
+
+
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+    margin: 0 5px;
+}
+
+.signInBtn {
+    height: 40px;
+    width: 80px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+.signInBtn:hover {
+    background-color: #F0F0F0;
+}
+
+.signUpBtn {
+    height: 40px;
+    width: 85px;
+    text-decoration: none;
+    background-color: #0066ff;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.signUpBtn:hover {
+    background-color: #0052cc;
+}
+
+@media (max-width: 550px) {
+    .menuSection { display: none; }
+    
+    .header {
+    justify-content: center;
+}
+
+}
+

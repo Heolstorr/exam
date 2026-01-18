@@ -1,0 +1,152 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.subHeader {
+    width: 100%;
+    height: 40px; 
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.generatorContainer {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.colorColumn {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.colorInfo {
+    margin-bottom: 60px; 
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7); 
+    mix-blend-mode: multiply; 
+}
+
+.hexCode {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+}
+
+.hexCode:hover {
+    opacity: 0.7;
+}
+
+.colorName {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px 0 0 0;
+    opacity: 0.6;
+}
+
+.toolbar {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-60%); 
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+}
+
+.colorColumn:hover .toolbar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toolBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s;
+    opacity: 0.6;
+}
+
+.toolBtn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.toolBtn img {
+    width: 20px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+.addDivider {
+    position: absolute;
+    right: -25px;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.addDivider:hover {
+    opacity: 1;
+}
+
+.addBtn {
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: #333;
+    padding-bottom: 4px;
+    outline: none;
+}
+
+.addBtn:hover {
+    background-color: #f8f8f8;
+    transform: scale(1.1);
+}

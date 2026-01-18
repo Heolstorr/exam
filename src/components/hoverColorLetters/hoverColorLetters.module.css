@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    font-size: clamp(60px, 12vw, 80px); 
+    line-height: 1.1;
+    display: inline-block; 
+    font-weight: inherit;
+}
+
+.letter.anim_color {
+    animation-name: letter-color;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+@keyframes letter-color {
+    0%, 100% { color: var(--default-color) }
+    15%, 85% { color: var(--color) }
+}
