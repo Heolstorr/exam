@@ -38,17 +38,34 @@
     padding: 30px;
     border-radius: 16px;
     width: 100%;
-    transition: transform 0.3s ease, border 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+
     cursor: pointer;
     margin: auto;
     border: 2px solid;
     border-color: #f8f9fa;
-
+    position: relative; 
 }
 
 .card:hover {
     transform: scale(1.05); 
     border-color: #cdcdcd;
+}
+
+.arrowIcon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 20px;
+    height: auto;
+    
+    opacity: 0;
+    transform: translate(-5px, 5px);
+    transition: all 0.3s ease;
+}
+.card:hover .arrowIcon {
+    opacity: 0.7;
+    transform: translate(0, 0);
 }
 
 .cardTitle {
@@ -58,6 +75,7 @@
     letter-spacing: 1px;
     margin-bottom: 20px;
     margin-top: 0;
+    color: #333;
 }
 
 .cardBody {
@@ -65,7 +83,6 @@
     gap: 20px;
     align-items: flex-start;
 }
-
 
 .swatchWrapper {
     display: flex;

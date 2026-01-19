@@ -1,4 +1,10 @@
 import styles from './Footer.module.css';
+import languageIcon from '../../assets/images/language.png';
+import downArrowIcon from '../../assets/images/downArrow.png';
+import twitterIcon from '../../assets/images/twitterB.png';
+import pinterestIcon from '../../assets/images/pinterest.png';
+import instagramIcon from '../../assets/images/instagram.png';
+import prodHuntIcon from '../../assets/images/prodHunt.png';
 
 export const Footer = () => {
     const footerSections = [
@@ -55,7 +61,30 @@ export const Footer = () => {
 
                 <div className={styles.bottomBar}>
                     <div className={styles.copyright}>
-                        &copy; Coolors by <strong>Lorem Ipsum</strong>. Let's make something cool!
+                        &copy; Coolors by <strong>Fabrizio Bianchi</strong>. Let's make something cool!
+                    </div>
+
+                    <div className={styles.rightSection}>
+                        <button className={styles.langButton}>
+                            <img src={languageIcon} alt="Language" className={styles.iconSm} />
+                            <span>English</span>
+                            <img src={downArrowIcon} alt="Select" className={styles.iconXs} />
+                        </button>
+
+                        <div className={styles.socialIcons}>
+                            <a href="#" className={styles.socialLink}>
+                                <img src={twitterIcon} alt="Twitter" />
+                            </a>
+                            <a href="#" className={styles.socialLink}>
+                                <img src={pinterestIcon} alt="Pinterest" />
+                            </a>
+                            <a href="#" className={styles.socialLink}>
+                                <img src={instagramIcon} alt="Instagram" />
+                            </a>
+                            <a href="#" className={styles.socialLink}>
+                                <img src={prodHuntIcon} alt="Product Hunt" />
+                            </a>
+                        </div>
                     </div>
                 </div>
 

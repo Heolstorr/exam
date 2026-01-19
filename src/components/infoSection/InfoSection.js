@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './InfoSection.module.css';
+import arrowIcon from '../../assets/images/top-right.png';
 
 export const InfoSection = () => {
     const colorOptions = [
@@ -10,7 +11,6 @@ export const InfoSection = () => {
         { name: "Bright Gold", hex: "#FFE135", desc: "Bright and cheerful yellow that evokes happiness, optimism, and the warmth of a sunny summer day." },
         { name: "Mint Fresh", hex: "#98FF98", desc: "A cool and refreshing shade of green that suggests nature, renewal, and a calm, peaceful atmosphere." }
     ];
-
 
     const [dailyColor, setDailyColor] = useState(colorOptions[0]);
 
@@ -35,6 +35,8 @@ export const InfoSection = () => {
                 <div className={styles.cardColumn}>
                     <Link to={`/colors/${hexUrl}`} style={{ textDecoration: 'none' }}>
                         <div className={styles.card}>
+                            <img src={arrowIcon} alt="" className={styles.arrowIcon} />
+                            
                             <p className={styles.cardTitle}>COLOR OF THE DAY</p>
                             
                             <div className={styles.cardBody}>
@@ -48,7 +50,7 @@ export const InfoSection = () => {
 
                                 <div className={styles.colorInfo}>
                                     <h3 className={styles.colorName}>{dailyColor.name}</h3>
-                                    <p className={styles. colorDesc}>
+                                    <p className={styles.colorDesc}>
                                         {dailyColor.desc}
                                     </p>
                                 </div>
