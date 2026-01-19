@@ -55,7 +55,7 @@ export const Footer = () => {
 
                 <div className={styles.bottomBar}>
                     <div className={styles.copyright}>
-                        &copy; Coolors by <strong>Fabrizio Bianchi</strong>. Let's make something cool!
+                        &copy; Coolors by <strong>Lorem Ipsum</strong>. Let's make something cool!
                     </div>
                 </div>
 
