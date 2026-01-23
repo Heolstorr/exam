@@ -26,6 +26,34 @@ export const GeneratorPage = () => {
         return newHex;
     };
 
+    const handleGenerate = useCallback(() => {
+            setColors(prevColors => {
+                const newColors = [];
+                for (let i = 0; i < prevColors.length; i++) {
+                    if (prevColors[i].isSaved) {
+                        newColors.push(prevColors[i]);
+                    } else {
+                        const hex = getUniqueHex(newColors);
+                        newColors.push({
+                            hex: hex,
+                            name: "New Color",
+                            isSaved: false 
+                        });
+                    }
+                }
+                return newColors;
+            });
+        }, []);
+
+    const handleKeyDown = useCallback((event) => {
+        if (event.target.tagName === 'INPUT') return;
+
+        if (event.code === 'Space') {
+            event.preventDefault();
+            handleGenerate();
+        }
+    }, [handleGenerate]);
+    
     useEffect(() => {
         const initialColors = [];
         for (let i = 0; i < 5; i++) {
@@ -36,28 +64,6 @@ export const GeneratorPage = () => {
             });
         }
         setColors(initialColors);
-    }, []);
-
-    const handleKeyDown = useCallback((event) => {
-        if (event.target.tagName === 'INPUT') return;
-
-        if (event.code === 'Space') {
-            event.preventDefault(); 
-            
-            setColors(prevColors => {
-                const newColors = [];
-                for (let i = 0; i < prevColors.length; i++) {
-                   
-                    const hex = getUniqueHex(newColors); 
-                    newColors.push({
-                        hex: hex,
-                        name: "Lorem Ipsum",
-                        isSaved: prevColors[i].isSaved 
-                    });
-                }
-                return newColors;
-            });
-        }
     }, []);
 
     useEffect(() => {
@@ -89,7 +95,7 @@ export const GeneratorPage = () => {
 
     const toggleSave = (index) => {
         const updatedColors = [...colors];
-        updatedColors[index].isSaved = true;
+        updatedColors[index].isSaved = !updatedColors[index].isSaved;
         setColors(updatedColors);
     };
 
@@ -161,8 +167,15 @@ export const GeneratorPage = () => {
                                 </button>
                             </div>
                         )}
+                        
                     </div>
                 ))}
+            </div>
+
+            <div className={styles.subFooter}>
+                <button className={styles.mobileGenerateBtn} onClick={handleGenerate}>
+                Generate
+                </button>
             </div>
         </div>
     );
