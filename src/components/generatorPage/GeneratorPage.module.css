@@ -9,6 +9,7 @@
 
 .subHeader {
     width: 100%;
+    margin-top: 60px;
     height: 40px; 
     background-color: #fff;
     display: flex;

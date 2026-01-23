@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 60px; 
+    padding-top: 100px; 
     background-color: #ffffff;
     overflow: hidden;
     align-items: center;
@@ -187,13 +187,8 @@
 @media (max-width: 450px){
     .buttonsWrapper {
         flex-direction: column;
+    }
 }
-}
-
-
-
-
-
 
 
 
